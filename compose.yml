@@ -4,6 +4,7 @@ services:
   mongo:
     image: mongodb/mongodb-community-server:latest
     command: --replSet rs0
+    restart: "always"
     volumes:
       - db_data:/data/db
     ports:
